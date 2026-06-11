@@ -1,0 +1,22 @@
+#!/bin/bash
+
+function greet(){
+	name=$1
+	echo "Namaste $name"
+
+}
+
+
+function install_package(){
+	pkg=$1
+  	echo "Installing $pkg"
+	sudo apt-get update && sudo apt-get install "$pkg" || echo "Not installed!"
+
+}
+
+
+
+greet "jethalal"
+greet "babita"
+install_package "nginx"
+
